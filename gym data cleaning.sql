@@ -81,7 +81,7 @@ FROM nc_gym_data3;
 -- 3c) Inserted split data from nc_gym_data2 into newly formed nc_gym_data3 table.
 
 INSERT INTO nc_gym_data3
-SELECT SUBSTRING_INDEX(column1, ';', 1) AS open_gym_start,
+SELECT SUBSTRING_INDEX(column1, ';', 1),
        SUBSTRING_INDEX(SUBSTRING_INDEX(column1, ';', 2), ';', -1),
        SUBSTRING_INDEX(SUBSTRING_INDEX(column1, ';', 3), ';', -1),
        SUBSTRING_INDEX(SUBSTRING_INDEX(column1, ';', 4), ';', -1),
@@ -132,10 +132,10 @@ SET female_male_check = CASE
                             WHEN total_females + total_males != total THEN 'error'
                             ELSE 'equals'
                         END,
-	nonres_res_check = CASE
-							WHEN total_non_residents + total_residents != total THEN 'error'
-							ELSE 'equals'
-						END;
+    nonres_res_check = CASE
+			    WHEN total_non_residents + total_residents != total THEN 'error'
+			    ELSE 'equals'
+		        END;
 
 -- 4c) Queries to view totals where the total females/males and total residents/nonresidents do not equal the stored value in the total column.
 
@@ -158,15 +158,15 @@ WHERE nonres_res_check = 'error';
 UPDATE nc_gym_data3
 SET total_males = total - total_females
 WHERE total_females != ''
-	AND total_males = ''
-	AND female_male_check = 'error';
+  AND total_males = ''
+  AND female_male_check = 'error';
 
 -- 4e) Removed remaining values entered incorrectly into the data that do not equal the total.
 
 DELETE
 FROM nc_gym_data3
 WHERE female_male_check = 'error'
-	OR nonres_res_check = 'error';
+  OR nonres_res_check = 'error';
 
 -- 4f) Fill in remaining blank values in total columns with 0 for data consistency.
 --     Modify total cols to int. Drop equal check columns.
@@ -195,12 +195,12 @@ DROP COLUMN nonres_res_check;
 SELECT *
 FROM nc_gym_data3
 WHERE facility_title = ''
-	OR address = ''
-	OR province = ''
-	OR postal_code = ''
-	OR pass_type = ''
-	OR community_center = ''
-	OR open_gym = '';
+  OR address = ''
+  OR province = ''
+  OR postal_code = ''
+  OR pass_type = ''
+  OR community_center = ''
+  OR open_gym = '';
 
 -- 5b) Queries to determine which facilities offer badminton sessions. Bond Park only one. Assumed blank value for badminton above relates to Bond Park.
 --     Updated missing row values shown in query above to match other data from bond park for badminton pass type.
@@ -225,7 +225,7 @@ SET address = '150 Metro Park',
     community_center = 'BPCC',
     facility_title = 'Bond Park Community Center'
 WHERE facility_title = ''
-	AND pass_type = 'Open Gym - Badminton';
+  AND pass_type = 'Open Gym - Badminton';
 
 -- 5c) Query to determine which facilities offer open pickleball gym sessions. All do.
 
@@ -321,7 +321,7 @@ WHERE open_gym_start LIKE '2019-12-14%'
 SELECT *
 FROM nc_gym_data3
 WHERE open_gym_start LIKE '2014-02-08%'
-	AND open_gym_end LIKE '2014-02-09%';
+  AND open_gym_end LIKE '2014-02-09%';
 
 -- 7e) Added column calculating the time lapse between start and end times.
 
