@@ -4,7 +4,7 @@
 ## Project Overview
 The purpose of this project was to display my process for cleaning a dataset and getting it ready for data analysis. The SQL queries shown accomplish tasks such as restructuring data, modifying data types, splitting data into separate columns, converting timestamp data from one timezone to another, updating missing values, and so on. 
 
-Review the SQL script *[HERE]*
+Review the SQL script *[HERE](https://github.com/msanders25/Data-Cleaning-in-SQL/blob/main/gym%20data%20cleaning.sql)*
 
 The dataset that I found to clean contains historical attendance numbers of open gym sessions at community centers in Cary, North Carolina. I chose this dataset to clean after viewing its original form and seeing all the data crammed into two columns which presented a good opportunity to showcase cleaning techniques. 
 
