@@ -2,11 +2,11 @@
 
 
 ## Project Overview
-The purpose of this project was to demonstrate my process for cleaning a dataset and getting it ready for data analysis using SQL. The queries shown accomplish tasks such as restructuring data, modifying data types, splitting data into separate columns, converting timestamp data from one timezone to another, updating missing values, and so on. 
+The purpose of this project was to demonstrate my process for cleaning a dataset and getting it ready for data analysis using SQL. The queries shown accomplish tasks such as restructuring data, modifying data types, splitting data into separate columns, converting timestamp data from one timezone to another, updating missing values, and more. 
 
 Review the SQL script *[HERE](https://github.com/msanders25/Data-Cleaning-in-SQL/blob/main/gym%20data%20cleaning.sql)*
 
-The CSV dataset that I found to clean contains historical attendance numbers of open gym sessions at community centers in Cary, North Carolina. I chose this dataset to clean after viewing its original form and seeing all the data crammed into two columns which presented a good opportunity to showcase cleaning techniques. 
+The CSV dataset that I cleaned contains historical attendance numbers of open gym sessions at community centers in Cary, North Carolina. I chose this dataset to clean due to its original format where the data was crammed into two columns which presented a good opportunity to showcase various cleaning techniques. 
 
 The original data can be found at this link: 
  - *[data.townofcary.org](https://data.townofcary.org/explore/dataset/open-gym/information/?disjunctive.facility_title&disjunctive.pass_type&disjunctive.community_center&disjunctive.open_gym&disjunctive.group)*
@@ -16,7 +16,7 @@ The raw data and resulting clean data have also been uploaded to this repository
  - *[clean data](https://github.com/msanders25/Data-Cleaning-in-SQL/blob/main/clean%20gym%20data.csv)*
 
 ## Project Challenges and Solutions
-There were several challenges that arose during this project but the challenges listed below were some of the most difficult. They required additional research to determine the best solution for producing the desired output.
+While this project presented various challenges, the following were particularly demanding and required additional research to achieve the desired outcomes.
 
 ### Challenge 1 - Combining and Separating the Original Data
 The raw data downloaded from the Cary town website was initially formatted into a single column with data fields separated by semi-colons. Some rows contained data that seemed misplaced, originally intended for the first column but the second half of the data fields from column1 were placed in a second adjecent column.
