@@ -8,5 +8,8 @@ The dataset that I found to clean contains historical attendance numbers of open
 
 The original data can be found at this link: 
  - *[data.townofcary.org](https://data.townofcary.org/explore/dataset/open-gym/information/?disjunctive.facility_title&disjunctive.pass_type&disjunctive.community_center&disjunctive.open_gym&disjunctive.group)*
- - *[dashboard raw data]
+
+The data has also been uploaded to this repository:
+ - *[raw data](https://github.com/msanders25/Data-Cleaning-in-SQL/blob/main/nc_gym_data.csv)*
+ - *[clean data](https://github.com/msanders25/Data-Cleaning-in-SQL/blob/main/nc_gym_data.csv)*
 
