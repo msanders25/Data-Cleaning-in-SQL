@@ -173,9 +173,9 @@ WHERE female_male_check = 'error'
 
 UPDATE nc_gym_data3
 SET total_females = CASE WHEN total_females = '' THEN 0 ELSE total_females END,
-	total_males = CASE WHEN total_males = '' THEN 0 ELSE total_males END,
-	total_non_residents =CASE WHEN total_non_residents = '' THEN 0 ELSE total_non_residents END,
-	total_residents =CASE WHEN total_residents = '' THEN 0 ELSE total_residents END;
+    total_males = CASE WHEN total_males = '' THEN 0 ELSE total_males END,
+    total_non_residents =CASE WHEN total_non_residents = '' THEN 0 ELSE total_non_residents END,
+    total_residents =CASE WHEN total_residents = '' THEN 0 ELSE total_residents END;
 
 ALTER TABLE nc_gym_data3 
 MODIFY total_females INT, 
